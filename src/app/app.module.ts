@@ -11,6 +11,8 @@ import { ViewContactComponent } from './components/view-contact/view-contact.com
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
+// Services
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +22,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     EditContactComponent,
     ViewContactComponent,
     LoadingSpinnerComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

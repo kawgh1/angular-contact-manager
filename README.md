@@ -21,6 +21,13 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
   - Update a contact: -> PUT http://localhost:9000/contacts/:contactId
   - Delete a contact: -> DELETE http://localhost:9000/contacts/:contactId
 
+- ### Services
+
+  - In React you use fetch or axios for getting data from APIs
+  - But in Angular it is a built in module called `HttpClientModule` that must be imported in `app.module.ts`
+    - // Services
+    - import { HttpClientModule } from '@angular/common/http';
+
 - ### Setup
 
   - #### Backend API
