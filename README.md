@@ -44,7 +44,7 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
       - npm i @fortawesome/fontawesome-free
       - fontawesome cdn in html link
 
-        - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
+        - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
 
                   File: angular.json
 
