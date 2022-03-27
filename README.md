@@ -16,10 +16,10 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
 - ### CRUD
 
   - GET all contacts: -> GET http://localhost:9000/contacts
-  - GET single contact: -> GET http://localhost:9000/contacts/:contactId
+  - GET single contact: -> GET http://localhost:9000/contacts/${contactId}
   - Create a contact: -> POST http://localhost:9000/contacts
-  - Update a contact: -> PUT http://localhost:9000/contacts/:contactId
-  - Delete a contact: -> DELETE http://localhost:9000/contacts/:contactId
+  - Update a contact: -> PUT http://localhost:9000/contacts/${contactId}
+  - Delete a contact: -> DELETE http://localhost:9000/contacts/${contactId}
 
 - ### Services
 
