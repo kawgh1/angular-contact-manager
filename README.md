@@ -3,6 +3,9 @@
 - npm install bootstrap
 - npm i @fortawesome/fontawesome-free
 
+        File: angular.json
+
+
         "projects": {
             "angular-contact-manager": {
             "projectType": "application",
@@ -25,8 +28,12 @@
                     "tsConfig": "tsconfig.app.json",
                     "assets": ["src/favicon.ico", "src/assets"],
                     "styles": [
-                    **"node_modules/@fortawesome/fontawesome-free/css/all.css",
-                    "node_modules/bootstrap/dist/css/boostrap.css",**
+                    *********************************************************
+                    Add these
+                    *********************************************************
+                    "node_modules/@fortawesome/fontawesome-free/css/all.css",
+                    "node_modules/bootstrap/dist/css/boostrap.css",
+                    **********************************************************
                     "src/styles.css"
                     ],
                     "scripts": []
