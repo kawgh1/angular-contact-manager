@@ -1,5 +1,7 @@
 # AngularContactManager
 
+UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
+
 - npm install bootstrap
 - npm i @fortawesome/fontawesome-free
 
@@ -28,13 +30,19 @@
                     "tsConfig": "tsconfig.app.json",
                     "assets": ["src/favicon.ico", "src/assets"],
                     "styles": [
-                    *********************************************************
-                    Add these
-                    *********************************************************
-                    "node_modules/@fortawesome/fontawesome-free/css/all.css",
-                    "node_modules/bootstrap/dist/css/boostrap.css",
-                    **********************************************************
-                    "src/styles.css"
+                        *********************************************************
+                        Add these 2
+                        *********************************************************
+                        "node_modules/@fortawesome/fontawesome-free/css/all.css",
+                        "node_modules/bootstrap/dist/css/boostrap.css",
+                        **********************************************************
+                        "src/styles.css"
                     ],
-                    "scripts": []
+                    "scripts": [
+                        *********************************************************
+                        Add this
+                        *********************************************************
+                        "node_modules/bootstrap/dist/js/boostrap.bundle.js",
+                        **********************************************************
+                    ]
                 },
