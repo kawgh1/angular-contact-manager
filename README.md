@@ -2,6 +2,17 @@
 
 UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
 
+- ### Components
+
+  - navbar
+  - contact-manager
+  - add-contact
+  - edit-contact
+  - view-contact
+  - loading spinner
+
+- ### Setup
+
 - npm install bootstrap
 - npm i @fortawesome/fontawesome-free
 
