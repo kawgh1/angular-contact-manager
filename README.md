@@ -25,8 +25,48 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
 
   - In React you use fetch or axios for getting data from APIs
   - But in **Angular** it is a built in module called **`HttpClientModule`** that must be imported in **`app.module.ts`**
+
     - // Services
     - **import { HttpClientModule } from '@angular/common/http';**
+
+            File: contact.service.ts
+
+                import { Injectable } from '@angular/core';
+                import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+                import { IContact } from '../models/IContact';
+                import { catchError, Observable, throwError } from 'rxjs';
+                import { IGroup } from '../models/IGroup';
+
+                @Injectable({
+                  providedIn: 'root',
+                })
+
+                export class ContactService {
+
+                  private serverURL: string = 'http://localhost:9000'; // json server url
+
+                  constructor(private httpClient: HttpClient) {}
+
+                  // API calls
+
+                  // *********
+                  // CONTACTS
+                  // *********
+
+                  // GET ALL CONTACTS
+                  // returns an Observable of type <IContact []> array
+
+                  public getAllContacts(): Observable<IContact[]> {
+
+                    let dataURL: string = `${this.serverURL}/contacts`;
+
+                    // call get and cast type <IContact[]> array
+                    return this.httpClient
+                      .get<IContact[]>(dataURL)
+                      .pipe(catchError(this.handleError));
+                  }
+                  ...
+                  ...
 
 - ### Setup
 
