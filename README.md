@@ -2,6 +2,8 @@
 
 UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
 
+- have to run 'npm start' in the root folder and 'npm start' in the root/server folder to get the backend running
+
 - ### Components
 
   - navbar
@@ -40,6 +42,9 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
 
       - npm install bootstrap
       - npm i @fortawesome/fontawesome-free
+      - fontawesome cdn in html link
+
+        - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
 
                   File: angular.json
 
