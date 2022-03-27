@@ -82,8 +82,8 @@ export class ContactService {
 
   // GET SINGLE GROUP
   // return an Observable of type <IGroup>
-  public getGroup(group: IGroup): Observable<IGroup> {
-    let dataURL: string = `${this.serverURL}/groups/${group.id}`;
+  public getGroup(contact: IContact): Observable<IGroup> {
+    let dataURL: string = `${this.serverURL}/groups/${contact.groupId}`;
     return this.httpClient
       .get<IGroup>(dataURL)
       .pipe(catchError(this.handleError));
@@ -95,10 +95,10 @@ export class ContactService {
     let errorMessage: string = '';
     if (error.error instanceof ErrorEvent) {
       // client error
-      errorMessage = 'Error: ${error.error.message}';
+      errorMessage = `Error: ${error.error.message}`;
     } else {
       // server error
-      errorMessage = 'Status: ${error.status} \n Message: ${error.message}';
+      errorMessage = `Status: ${error.status} \n Message: ${error.message}`;
     }
 
     console.log(errorMessage);

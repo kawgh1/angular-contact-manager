@@ -12,35 +12,51 @@
   </div>
 </div>
 
+<!--  Loading Spinner -->
+<div *ngIf="loading"><app-loading-spinner></app-loading-spinner></div>
+
+<!-- Error Message -->
+<div *ngIf="!loading && errorMessage">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="h4 text-danger fw-bold">{{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <pre>{{ contact | json }}</pre> -->
+
 <!-- Contact Details -->
-<div class="container mt-4">
+<div class="container mt-4" *ngIf="!loading && contact">
   <div class="row align-items-center">
     <div class="col-sm-4">
       <img
         class="contact-img-big"
-        src="http://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png"
-        alt=""
+        [src]="contact.photo"
+        alt="{{ contact.name }}"
       />
     </div>
     <div class="col-md-4 mt-4">
       <ul class="list-group">
         <li class="list-group-item list-group-item-danger">
-          Name: <span class="fw-bold">Name</span>
+          Name: <span class="fw-bold">{{ contact.name }}</span>
         </li>
         <li class="list-group-item list-group-item-danger">
-          Email: <span class="fw-bold">Email</span>
+          Email: <span class="fw-bold">{{ contact.email }}</span>
         </li>
         <li class="list-group-item list-group-item-danger">
-          Mobile: <span class="fw-bold">Mobile</span>
+          Mobile: <span class="fw-bold">{{ contact.mobile }}</span>
         </li>
         <li class="list-group-item list-group-item-danger">
-          Company: <span class="fw-bold">Company</span>
+          Company: <span class="fw-bold">{{ contact.company }}</span>
         </li>
         <li class="list-group-item list-group-item-danger">
-          Title: <span class="fw-bold">Title</span>
+          Title: <span class="fw-bold">{{ contact.title }}</span>
         </li>
         <li class="list-group-item list-group-item-danger">
-          Group: <span class="fw-bold">Group</span>
+          Group: <span class="fw-bold">{{ group.name }}</span>
         </li>
       </ul>
     </div>
