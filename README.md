@@ -28,6 +28,7 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
 
     - // Services
     - **import { HttpClientModule } from '@angular/common/http';**
+    - ### `contact.service.ts`
 
             File: contact.service.ts
 
