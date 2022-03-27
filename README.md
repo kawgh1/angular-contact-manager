@@ -34,7 +34,7 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
                         Add these 2
                         *********************************************************
                         "node_modules/@fortawesome/fontawesome-free/css/all.css",
-                        "node_modules/bootstrap/dist/css/boostrap.css",
+                        "node_modules/bootstrap/dist/css/bootstrap.css",
                         **********************************************************
                         "src/styles.css"
                     ],
@@ -42,7 +42,7 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
                         *********************************************************
                         Add this
                         *********************************************************
-                        "node_modules/bootstrap/dist/js/boostrap.bundle.js",
+                        "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
                         **********************************************************
                     ]
                 },
