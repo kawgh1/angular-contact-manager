@@ -13,6 +13,18 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
 
 - ### Setup
 
+- json server
+
+  - create server folder
+    - in terminal `npm init --yes` to create package.json
+    - then `npm install json-server`
+  - json server looks for a database called `db.json`
+    - in `db.json` add script
+      - "scripts": {
+        "start": "json-sever --watch db.json"
+        },
+    - **Don't forget to add a `.gitignore` in server folder**
+
 - npm install bootstrap
 - npm i @fortawesome/fontawesome-free
 
