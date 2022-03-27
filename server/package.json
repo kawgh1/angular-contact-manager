@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-sever --watch db.json"
+    "start": "json-sever --watch db.json -p 9000"
   },
   "keywords": [],
   "author": "",

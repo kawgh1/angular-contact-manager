@@ -21,7 +21,7 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
   - json server looks for a database called `db.json`
     - in `db.json` add script
       - "scripts": {
-        "start": "json-sever --watch db.json"
+        "start": "json-sever --watch db.json -p 9000"
         },
     - **Don't forget to add a `.gitignore` in server folder**
 
