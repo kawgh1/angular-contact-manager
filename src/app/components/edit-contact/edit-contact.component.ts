@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IContact } from 'src/app/models/IContact';
 import { IGroup } from 'src/app/models/IGroup';
 import { ContactService } from 'src/app/services/contact.service';
@@ -18,7 +18,8 @@ export class EditContactComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private contactService: ContactService
+    private contactService: ContactService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -38,6 +39,21 @@ export class EditContactComponent implements OnInit {
         (error) => {
           this.errorMessage = error;
           this.loading = false;
+        }
+      );
+    }
+  }
+
+  public submitUpdate() {
+    if (this.contactId) {
+      this.contactService.updateContact(this.contact, this.contactId).subscribe(
+        (data) => {
+          this.router.navigate(['/']).then();
+        },
+        (error) => {
+          this.errorMessage = error;
+          // stay on same page if error
+          this.router.navigate([`/contacts/edit/${this.contactId}`]).then();
         }
       );
     }

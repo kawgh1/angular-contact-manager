@@ -20,10 +20,11 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <form>
+      <form ngNativeValidate (submit)="submitUpdate()">
         <div class="mb-2">
           <input
             [(ngModel)]="contact.name"
+            [value]="contact.name"
             name="name"
             required="true"
             type="text"
@@ -34,6 +35,7 @@
         <div class="mb-2">
           <input
             [(ngModel)]="contact.photo"
+            [value]="contact.photo"
             name="photo"
             required="true"
             type="text"
@@ -44,6 +46,7 @@
         <div class="mb-2">
           <input
             [(ngModel)]="contact.email"
+            [value]="contact.email"
             name="email"
             required="true"
             type="email"
@@ -54,6 +57,7 @@
         <div class="mb-2">
           <input
             [(ngModel)]="contact.mobile"
+            [value]="contact.mobile"
             name="mobile"
             required="true"
             type="number"
@@ -64,6 +68,7 @@
         <div class="mb-2">
           <input
             [(ngModel)]="contact.company"
+            [value]="contact.company"
             name="company"
             required="true"
             type="text"
@@ -74,6 +79,7 @@
         <div class="mb-2">
           <input
             [(ngModel)]="contact.title"
+            [value]="contact.title"
             name="title"
             required="true"
             type="text"
@@ -82,8 +88,17 @@
           />
         </div>
         <div class="mb-2">
-          <select class="form-control">
+          <select
+            [(ngModel)]="contact.groupId"
+            [value]="contact.groupId"
+            name="groupId"
+            class="form-control"
+            required="true"
+          >
             <option value="">Select a Group</option>
+            <option [value]="group.id" *ngFor="let group of groups">
+              {{ group.name }}
+            </option>
           </select>
         </div>
         <div class="mb-2">
@@ -98,11 +113,7 @@
       </form>
     </div>
     <div class="col-sm-4">
-      <img
-        class="contact-img"
-        src="http://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png"
-        alt=""
-      />
+      <img class="contact-img" [src]="contact.photo" [alt]="contact.name" />
     </div>
   </div>
 </div>
