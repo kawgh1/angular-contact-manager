@@ -7,6 +7,7 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
 - ### Forms - Two Way Data (Form Input) Binding
 
   - Have to import `FormsModule` into `app.module.ts` and add to `imports`
+  - `[(ngModel)]="contact.email" name="email"`
 
 .
 
