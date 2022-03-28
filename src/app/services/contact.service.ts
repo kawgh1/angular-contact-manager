@@ -74,7 +74,7 @@ export class ContactService {
   // GET ALL GROUPS
   // returns an Observable of type <IGroup[]> array
   public getAllGroups(): Observable<IGroup[]> {
-    let dataURL: string = `{this.serverURL}/groups`;
+    let dataURL: string = `${this.serverURL}/groups`;
     return this.httpClient
       .get<IGroup[]>(dataURL)
       .pipe(catchError(this.handleError));

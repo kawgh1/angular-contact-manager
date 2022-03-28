@@ -13,6 +13,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 // Services
 import { HttpClientModule } from '@angular/common/http';
+
+// Forms - Two Way Binding
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoadingSpinnerComponent,
     PageNotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

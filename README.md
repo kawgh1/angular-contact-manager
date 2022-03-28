@@ -4,6 +4,10 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
 
 - have to run 'npm start' in the root folder and 'npm start' in the root/server folder to get the backend running
 
+- ### Forms - Two Way Binding
+
+  - Have to import `FormsModule` into `app.module.ts` and add to `imports`
+
 - ### Components
 
   - navbar

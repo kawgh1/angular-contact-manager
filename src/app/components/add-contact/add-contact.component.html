@@ -12,6 +12,22 @@
   </div>
 </div>
 
+<!-- <pre>{{ groups | json }}</pre> -->
+
+<!--  Loading Spinner -->
+<div *ngIf="loading"><app-loading-spinner></app-loading-spinner></div>
+
+<!-- Error Message -->
+<div *ngIf="!loading && errorMessage">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="h4 text-danger fw-bold">{{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Create Contact Form -->
 
 <div class="container">
@@ -37,8 +53,11 @@
           <input type="text" class="form-control" placeholder="Title" />
         </div>
         <div class="mb-2">
-          <select class="form-control">
+          <select class="form-control" *ngIf="!loading && groups.length > 0">
             <option value="">Select a Group</option>
+            <option [value]="group.id" *ngFor="let group of groups">
+              {{ group.name }}
+            </option>
           </select>
         </div>
         <div class="mb-2">
