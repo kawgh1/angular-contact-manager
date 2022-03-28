@@ -35,7 +35,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <form>
+      <form ngNativeValidate (submit)="createSubmit()">
         <div class="mb-2">
           <input
             [(ngModel)]="contact.name"
@@ -43,6 +43,7 @@
             type="text"
             class="form-control"
             placeholder="Name"
+            required="true"
           />
         </div>
         <div class="mb-2">
@@ -52,6 +53,7 @@
             type="text"
             class="form-control"
             placeholder="Photo Url"
+            required="true"
           />
         </div>
         <div class="mb-2">
@@ -61,6 +63,7 @@
             type="email"
             class="form-control"
             placeholder="Email"
+            required="true"
           />
         </div>
         <div class="mb-2">
@@ -70,6 +73,7 @@
             type="number"
             class="form-control"
             placeholder="Mobile"
+            required="true"
           />
         </div>
         <div class="mb-2">
@@ -79,6 +83,7 @@
             type="text"
             class="form-control"
             placeholder="Company"
+            required="true"
           />
         </div>
         <div class="mb-2">
@@ -88,11 +93,18 @@
             type="text"
             class="form-control"
             placeholder="Title"
+            required="true"
           />
         </div>
         <div class="mb-2">
-          <select class="form-control" *ngIf="!loading && groups.length > 0">
-            <option value="">Select a Group</option>
+          <select
+            [(ngModel)]="contact.groupId"
+            name="groupId"
+            *ngIf="!loading && groups.length > 0"
+            class="form-control"
+            required="true"
+          >
+            <option value="undefined" selected disabled>Select a Group</option>
             <option [value]="group.id" *ngFor="let group of groups">
               {{ group.name }}
             </option>
@@ -111,9 +123,10 @@
     </div>
     <div class="col-sm-4">
       <img
+        *ngIf="contact.photo"
         class="contact-img"
-        src="http://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png"
-        alt=""
+        [src]="contact.photo"
+        [alt]="contact.name"
       />
     </div>
   </div>

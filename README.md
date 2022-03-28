@@ -22,6 +22,10 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
             placeholder="Email"
           />
 
+- ### Form Validation
+- `<form ngNativeValidate (submit)="createSubmit()">`
+- Putting `required='true'` on inputs isnt enough. Have to add `ngNativeValidate` property to form for browser validation
+
 - ### Components
 
   - navbar

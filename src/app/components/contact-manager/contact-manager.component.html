@@ -1,9 +1,9 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col">
-      <p class="h3 text-danger fw-bold">
+      <p class="h3 text-danger fw-bold d-flex align-items-center">
         NG Contacts
-        <a class="btn btn-danger btn-sm" routerLink="/contacts/add"
+        <a class="btn btn-danger btn-sm mx-2" routerLink="/contacts/add"
           ><i class="fa fa-circle-plus me-2"></i>New</a
         >
       </p>
@@ -91,7 +91,7 @@
                 ><i class="fa fa-eye"></i
               ></a>
               <a
-                routerLink="/contacts/edit/:contactId"
+                routerLink="/contacts/edit/{{ contact.id }}"
                 class="btn btn-primary my-1"
                 ><i class="fa fa-pen"></i
               ></a>
