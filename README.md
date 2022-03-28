@@ -4,9 +4,22 @@ UI Brains @ https://www.youtube.com/watch?v=xCkybV9mtk8
 
 - have to run 'npm start' in the root folder and 'npm start' in the root/server folder to get the backend running
 
-- ### Forms - Two Way Binding
+- ### Forms - Two Way Data (Form Input) Binding
 
   - Have to import `FormsModule` into `app.module.ts` and add to `imports`
+
+.
+
+          File: add-contact.component.html
+
+          ...
+          <input
+            [(ngModel)]="contact.email"
+            name="email"
+            type="email"
+            class="form-control"
+            placeholder="Email"
+          />
 
 - ### Components
 

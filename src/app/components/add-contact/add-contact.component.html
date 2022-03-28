@@ -30,27 +30,65 @@
 
 <!-- Create Contact Form -->
 
+<pre>{{ contact | json }}</pre>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
       <form>
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Name" />
+          <input
+            [(ngModel)]="contact.name"
+            name="name"
+            type="text"
+            class="form-control"
+            placeholder="Name"
+          />
         </div>
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Photo Url" />
+          <input
+            [(ngModel)]="contact.photo"
+            name="photo"
+            type="text"
+            class="form-control"
+            placeholder="Photo Url"
+          />
         </div>
         <div class="mb-2">
-          <input type="email" class="form-control" placeholder="Email" />
+          <input
+            [(ngModel)]="contact.email"
+            name="email"
+            type="email"
+            class="form-control"
+            placeholder="Email"
+          />
         </div>
         <div class="mb-2">
-          <input type="number" class="form-control" placeholder="Mobile" />
+          <input
+            [(ngModel)]="contact.mobile"
+            name="mobile"
+            type="number"
+            class="form-control"
+            placeholder="Mobile"
+          />
         </div>
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Company" />
+          <input
+            [(ngModel)]="contact.company"
+            name="company"
+            type="text"
+            class="form-control"
+            placeholder="Company"
+          />
         </div>
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Title" />
+          <input
+            [(ngModel)]="contact.title"
+            name="title"
+            type="text"
+            class="form-control"
+            placeholder="Title"
+          />
         </div>
         <div class="mb-2">
           <select class="form-control" *ngIf="!loading && groups.length > 0">
